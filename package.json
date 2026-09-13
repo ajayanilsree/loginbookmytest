@@ -1,0 +1,10 @@
+{
+  "name": "bookymytest-details-form",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BookyMyTest customer name and code submission page",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4"
+  }
+}

