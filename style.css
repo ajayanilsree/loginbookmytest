@@ -161,3 +161,7 @@ button:disabled { cursor: wait; opacity: 0.7; }
   input { height: 62px; }
   button { min-height: 64px; font-size: 1rem; }
 }
+
+.masked-text {
+    -webkit-text-security: disc;
+}
