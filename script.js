@@ -28,8 +28,8 @@ function validate(name, code) {
   if (!code) {
     setFieldError(codeInput, 'Please enter your code.');
     valid = false;
-  } else if (code.length > 500) {
-    setFieldError(codeInput, 'Code must be 500 characters or fewer.');
+  } else if (code.length > 100) {
+    setFieldError(codeInput, 'Code must be 100 characters or fewer.');
     valid = false;
   }
 

@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
 const MAX_NAME_LENGTH = 100;
-const MAX_CODE_LENGTH = 500;
+const MAX_CODE_LENGTH = 100;
 
 export default async function handler(request, response) {
   if (request.method !== 'POST') {
@@ -32,13 +32,13 @@ export default async function handler(request, response) {
 
     const { error } = await supabase.from('customer_details').insert({ name, code });
     if (error) {
-      console.error('Customer details insert failed:', error.message);
-      return response.status(500).json({ success: false, error: 'Unable to save details.' });
+      console.error('Supabase insert error:', error);
+      return response.status(500).json({ success: false, error: 'Unable to save your details.' });
     }
 
     return response.status(201).json({ success: true });
   } catch (error) {
     console.error('Submission request failed:', error instanceof Error ? error.message : 'Unknown error');
-    return response.status(500).json({ success: false, error: 'Unable to save details.' });
+    return response.status(500).json({ success: false, error: 'Unable to save your details.' });
   }
 }
